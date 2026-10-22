@@ -3,49 +3,10 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import GameCard from "./components/GameCard";
+import games from "./data/games.json";
 
 function App() {
-  // State to hold search query
   const [search, setSearch] = useState("");
-
-  // Array of games (expanded with 7 games total)
-  const games = [
-    {
-      id: 1,
-      title: "Minecraft",
-      platform: "PC",
-    },
-    {
-      id: 2,
-      title: "Mario Kart",
-      platform: "Nintendo Switch",
-    },
-    {
-      id: 3,
-      title: "Rocket League",
-      platform: "PlayStation 5",
-    },
-    {
-      id: 4,
-      title: "Elden Ring",
-      platform: "PC",
-    },
-    {
-      id: 5,
-      title: "The Legend of Zelda",
-      platform: "Nintendo Switch",
-    },
-    {
-      id: 6,
-      title: "Fortnite",
-      platform: "PC",
-    },
-    {
-      id: 7,
-      title: "EA Sports FC 26",
-      platform: "PlayStation 5",
-    },
-  ];
 
   return (
     <div className="container">
@@ -57,7 +18,6 @@ function App() {
         <p>Studentnummer: [Your Student Number]</p>
         <p>Klas: 25A</p>
 
-        {/* Assignment 2 & 5: Styled search input field */}
         <input
           className="search-input"
           type="text"
@@ -66,7 +26,6 @@ function App() {
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        {/* Assignment 3: Filter array based on search input before mapping */}
         {games
           .filter((game) =>
             game.title.toLowerCase().includes(search.toLowerCase())
@@ -76,6 +35,9 @@ function App() {
               key={game.id}
               title={game.title}
               platform={game.platform}
+              genre={game.genre}
+              rating={game.rating}
+              year={game.year}
             />
           ))}
       </div>
