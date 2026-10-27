@@ -6,7 +6,9 @@
     "genre": "Sandbox",
     "rating": 9.5,
     "year": 2011,
-    "image": "minecraft.jpg"
+    "image": "minecraft.jpg",
+    "developer": "Mojang Studios",
+    "multiplayer": "Ja"
   },
   {
     "id": 2,
@@ -14,7 +16,10 @@
     "platform": "Nintendo Switch 2",
     "genre": "Race",
     "rating": 9.3,
-    "year": 2025
+    "year": 2025,
+    "image": "",
+    "developer": "Nintendo",
+    "multiplayer": "Ja"
   },
   {
     "id": 3,
@@ -22,14 +27,9 @@
     "platform": "PlayStation 5",
     "genre": "Sport",
     "rating": 8.9,
-    "year": 2015
-  },
-  {
-    "id": 4,
-    "title": "⚽ EA Sports FC 26",
-    "platform": "PlayStation 5",
-    "genre": "Sport",
-    "rating": 8.6,
-    "year": 2025
+    "year": 2015,
+    "image": "",
+    "developer": "Psyonix",
+    "multiplayer": "Ja"
   }
 ]

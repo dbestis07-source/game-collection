@@ -10,25 +10,28 @@ function App() {
 
   return (
     <div className="container">
-      <Header title="🎮 Game Collection" />
+      <Header title="🎮 Mijn Ultieme Game Collection" />
 
       <div className="game-list">
-        <h2>Welkom bij mijn eerste React-applicatie!</h2>
+        <h2>Welkom bij mijn eindproject!</h2>
         <p>Naam: Dilbeste</p>
-        <p>Studentnummer: [Your Student Number]</p>
+        <p>Studentnummer: [Jouw Studentnummer]</p>
         <p>Klas: 25A</p>
 
         <input
           className="search-input"
           type="text"
-          placeholder="Zoek een game..."
+          placeholder="Zoek op titel, genre, platform of developer..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
 
         {games
           .filter((game) =>
-            game.title.toLowerCase().includes(search.toLowerCase())
+            game.title.toLowerCase().includes(search.toLowerCase()) ||
+            game.genre.toLowerCase().includes(search.toLowerCase()) ||
+            game.platform.toLowerCase().includes(search.toLowerCase()) ||
+            game.developer.toLowerCase().includes(search.toLowerCase())
           )
           .map((game) => (
             <GameCard
@@ -36,6 +39,8 @@ function App() {
               title={game.title}
               platform={game.platform}
               genre={game.genre}
+              developer={game.developer}
+              multiplayer={game.multiplayer}
               rating={game.rating}
               year={game.year}
               image={game.image}
